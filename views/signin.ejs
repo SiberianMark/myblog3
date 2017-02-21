@@ -1,0 +1,29 @@
+<%- include('header') %>
+
+<div class="login" style="width:50%;text-align:center;margin:0 auto">
+<form class="form-horizontal" method="post">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">用户名</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="用户名" name="name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">密码</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Password" name="password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> 记住我
+      </label>
+      <button type="submit" class="btn btn-large">登录</button>
+    </div>
+  </div>
+</form>
+
+</div>
+
+<%- include('footer') %>

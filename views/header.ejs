@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Konstructs Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+<!-- header-section-starts -->
+  <div class="header">
+    <div class="container">
+      <div class="logo">
+       <a href="/posts"><h1><%= blog.title %></h1></a>
+       <p><%= blog.description %></p>
+      </div>
+      <div class="navigation">
+        <ul>
+         <% if (user) { %>
+         <li><a class="item" href="/posts?author=<%= user._id %>">个人主页</a></li>
+         <li> <a class="item" href="/posts/create">发表文章</a> </li>
+         <li> <a class="item" href="/signout">登出</a></li> 
+        <% } else { %>
+         <li>  <a class="item" href="/signin">登录</a></li>
+         <li>  <a class="item" href="/signup">注册</a></li>
+        <% } %>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= blog.title %></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+  </head>
+  <body> -->
+<!--   <%- include('components/nav') %> -->
+<!--   <%- include('components/nav-setting') %> -->
+  <%- include('components/notification') %>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="content">
+    <%  posts.forEach(function(item){ %>
+      <div class="col-md-7 content-left">
+        <div class="article">
+          <h5 class="head">in recent news</h5>
+          <h6>Software </h6>
+          <a class="title" href="/posts/<%= item._id %>"><%= item.title %></a>
+          <a href="single.html"><img src="<%= item.imgfile %>" alt="" /></a>
+          <p><%- (item.content.substring(1,100)) %>...</p>
+          <div>
+              <span class="tag"><%= item.created_at %></span>
+              <span class="tag right">
+                <span>浏览(<%= item.pv %>)</span>
+                <span>留言(<%= item.commentsCount %>)</span>
+                
+                <% if (user && item.author._id && user._id.toString() === item.author._id.toString()) { %>
+                  <div class="ui inline dropdown">
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                      <div class="item"><a href="/posts/<%= item._id %>/edit">编辑</a></div>
+                      <div class="item"><a href="/posts/<%= item._id %>/remove">删除</a></div>
+                    </div>
+                  </div>
+                <% } %>
+              </span>
+          </div>
+        </div>
+      </div> 
+      <div class="clearfix"></div>  
+    <% }) %>      
+  </div>
+</div>
+
+
